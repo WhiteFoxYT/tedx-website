@@ -16,22 +16,20 @@ export default function About() {
 
       <section className="about" id="message" style={{ background: 'linear-gradient(135deg, #1a1a1a 0%, #0f0f0f 100%)' }}>
         <div className="section-label">Liderlik Mesajı</div>
-        <div className="section-title">Yönetim Kurulu Başkanından Bir Mesaj</div>
+        <div className="section-title">Organizasyon Direktöründen Bir Mesaj</div>
         <p style={{ marginBottom: '20px' }}>
           <strong>Değerli Katılımcılar,</strong>
         </p>
         <p style={{ marginBottom: '20px' }}>
-          TEDxAYZOFL YOUTH etkinliğine katıldığınız için teşekkür ederiz. Bu etkinlik, gençlerimizin
-          yaratıcılıklarını ve fikirlerini paylaşmak için bir platform oluşturmak amacıyla organize edilmiştir.
+          TEDxAYZOFL Youth etkinliğine katıldığınız için teşekkür ederiz! Bu etkinlik, bütün katılımcıların fikirlerini özgürce ifade edebildiği ve birbirinden ilham aldığı bir platform oluşturma amacıyla, tamamen lise öğrencilerinden oluşan ekibimiz tarafından büyük bir heyecanla organize edilmiştir.
         </p>
         <p style={{ marginBottom: '20px' }}>
-          Sınırları aşan ve değişim yaratan fikirleri bir araya getirerek, daha iyi bir gelecek inşaa etmeyi
-          amaçlıyoruz. Sizin ilham veren konuşmalarınız ve fikirleriniz, bu etkinliği başarılı kılacaktır.
+          Bu yıl "Farkındalık" temasıyla; kendimizi, çevremizi ve dünyayı daha bilinçli bir şekilde anlamanın gücünü birlikte keşfetmeyi hedefliyoruz. Alanında değerli konuşmacılarımızın ilham verici paylaşımlarıyla, yeni bakış açıları kazanacağımıza ve vizyonunuzu genişletmeye yardımcı olacağımıza inanıyoruz. Sizlerin katkısı ve enerjisi, bu etkinliği daha da anlamlı kılacaktır.
         </p>
         <p>
-          Hoş geldiniz ve keyifli bir etkinlik geçirmeniz dileğiyle,
+          Katılımınız için teşekkür eder, ilham dolu ve keyifli bir etkinlik geçirmenizi dilerim.
           <br />
-          <strong>AYZOFL YOUTH Yönetim Kurulu</strong>
+          <strong>Organizasyon Direktörü</strong>
         </p>
       </section>
     </>
