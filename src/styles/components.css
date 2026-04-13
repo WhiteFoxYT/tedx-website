@@ -1,0 +1,936 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+/* ── Reset & base ── */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: #d0d0d0;
+  background: #050505;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.app {
+  width: 100%;
+  overflow-x: hidden;
+  min-height: 100vh;
+  padding-top: 70px;
+}
+
+/* ── Navigation ── */
+nav {
+  background: linear-gradient(135deg, #1a1a1a 0%, #0f0f0f 100%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  height: 70px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  box-shadow: 0 4px 20px rgba(185, 28, 28, 0.2), 0 0 20px rgba(185, 28, 28, 0.08);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(185, 28, 28, 0.15);
+  transition: all 0.3s ease;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+nav:hover {
+  box-shadow: 0 8px 32px rgba(185, 28, 28, 0.3), 0 0 30px rgba(185, 28, 28, 0.15);
+  border-bottom-color: rgba(185, 28, 28, 0.3);
+}
+
+.nav-logo {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.nav-logo:hover {
+  transform: scale(1.08);
+}
+
+.nav-logo::before {
+  content: 'TEDx';
+  background: linear-gradient(135deg, #EE1C25 0%, #EE1C25 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 20px;
+}
+
+.nav-logo .ayzofl {
+  color: #ffffff;
+  font-weight: 900;
+  font-size: 16px;
+  letter-spacing: -0.5px;
+}
+
+.nav-logo .youth {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 32px;
+}
+
+nav ul a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  position: relative;
+  transition: all 0.3s ease;
+  letter-spacing: 0.3px;
+}
+
+nav ul a::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #b91c1c, #dc2626);
+  transition: width 0.3s ease;
+}
+
+nav ul a:hover {
+  color: #dc2626;
+}
+
+nav ul a:hover::after {
+  width: 100%;
+}
+
+.nav-apply-btn {
+  background: linear-gradient(135deg, #EE1C25 0%, #dc2626 100%);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 13px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 12px rgba(238, 28, 37, 0.3);
+}
+
+.nav-apply-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(238, 28, 37, 0.5);
+  background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+}
+
+/* ── Hero section ── */
+.hero {
+  background: linear-gradient(135deg, #050505 0%, #1a1a1a 50%, #0f0f0f 100%);
+  color: #fff;
+  text-align: center;
+  padding: 140px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.08) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: float 8s ease-in-out infinite;
+  filter: blur(40px);
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: -30%;
+  left: -5%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.15) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: float 6s ease-in-out infinite;
+  animation-delay: 1s;
+  filter: blur(50px);
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(40px);
+  }
+}
+
+.hero h1 {
+  font-size: 80px;
+  line-height: 1.1;
+  margin-bottom: 24px;
+  font-weight: 900;
+  position: relative;
+  z-index: 1;
+  color: #ffffff;
+  letter-spacing: -2px;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  max-width: 100%;
+}
+
+.hero h1 span.tedx {
+  color: #EE1C25;
+  font-weight: 900;
+}
+
+.hero h1 span.ayzofl {
+  color: #ffffff;
+  font-weight: 900;
+}
+
+.hero p {
+  font-size: 18px;
+  color: #d0d0d0;
+  margin-bottom: 28px;
+  position: relative;
+  z-index: 1;
+  line-height: 1.8;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  max-width: 100%;
+}
+
+.hero .details {
+  font-size: 15px;
+  color: #a0a0a0;
+  margin-bottom: 40px;
+  position: relative;
+  z-index: 1;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  max-width: 100%;
+}
+
+.btn {
+  display: inline-block;
+  background: linear-gradient(135deg, #b91c1c 0%, #8b1a1a 50%, #dc2626 100%);
+  color: #fff;
+  padding: 14px 40px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 8px 25px rgba(185, 28, 28, 0.35), 0 0 20px rgba(185, 28, 28, 0.2);
+  border: 1px solid rgba(220, 38, 38, 0.4);
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+.btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(185, 28, 28, 0.5), 0 0 40px rgba(185, 28, 28, 0.3);
+  border-color: rgba(220, 38, 38, 0.6);
+}
+
+.btn:active {
+  transform: translateY(-1px);
+}
+
+/* ── Special Apply Button ── */
+.btn-apply {
+  display: inline-block;
+  background: linear-gradient(135deg, #b91c1c 0%, #8b1a1a 50%, #dc2626 100%);
+  color: #fff;
+  padding: 18px 50px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 12px 35px rgba(185, 28, 28, 0.45), 0 0 30px rgba(220, 38, 38, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  border: 2px solid rgba(220, 38, 38, 0.5);
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.btn-apply:hover {
+  transform: translateY(-6px) scale(1.05);
+  box-shadow: 0 20px 50px rgba(185, 28, 28, 0.6), 0 0 50px rgba(185, 28, 28, 0.4);
+  border-color: rgba(220, 38, 38, 0.7);
+}
+
+.btn-apply:active {
+  transform: translateY(-2px) scale(1.02);
+}
+
+/* ── Section titles ── */
+section {
+  padding: 100px 40px;
+  position: relative;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.section-label {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  opacity: 0;
+  animation: fadeInUp 0.6s ease-out 0.1s forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.section-title {
+  font-size: 48px;
+  font-weight: 800;
+  margin-bottom: 48px;
+  opacity: 0;
+  animation: fadeInUp 0.6s ease-out 0.2s forwards;
+  color: #f5f5f5;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  max-width: 100%;
+}
+
+.section-title .tedx {
+  color: #EE1C25;
+}
+
+.section-title .ayzofl {
+  color: #ffffff;
+  font-weight: 900;
+}
+
+.section-title .youth {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.9em;
+}
+
+/* ── About ── */
+.about {
+  background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 50%, #0f0f0f 100%);
+  padding: 120px 40px;
+  position: relative;
+}
+
+.about::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 200px;
+  background: linear-gradient(180deg, rgba(238, 28, 37, 0.08) 0%, transparent 100%);
+  pointer-events: none;
+}
+
+.about p {
+  font-size: 16px;
+  line-height: 1.9;
+  max-width: 800px;
+  color: #d0d0d0;
+  margin: 0 auto;
+  opacity: 0;
+  animation: fadeInUp 0.6s ease-out 0.3s forwards;
+  text-align: justify;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  padding: 0 20px;
+}
+
+/* ── Speakers ── */
+section#speakers {
+  background: linear-gradient(135deg, #1a1a1a 0%, #252525 50%, #1a1a1a 100%);
+  padding: 120px 40px 80px;
+  position: relative;
+}
+
+section#speakers::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 200px;
+  background: linear-gradient(180deg, rgba(238, 28, 37, 0.05) 0%, transparent 100%);
+  pointer-events: none;
+}
+
+.speakers-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  justify-content: center;
+  opacity: 0;
+  animation: fadeInUp 0.6s ease-out 0.3s forwards;
+}
+
+.speaker-card {
+  background: linear-gradient(135deg, #1a1a1a 0%, #0f0f0f 100%);
+  border: 1px solid rgba(185, 28, 28, 0.2);
+  border-radius: 12px;
+  padding: 32px 28px;
+  width: 280px;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 24px rgba(185, 28, 28, 0.15), 0 0 15px rgba(185, 28, 28, 0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+.speaker-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #b91c1c, #dc2626);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.speaker-card:hover {
+  background: linear-gradient(135deg, #252525 0%, #1a1a1a 100%);
+  box-shadow: 0 16px 40px rgba(185, 28, 28, 0.3), 0 0 25px rgba(185, 28, 28, 0.15);
+  transform: translateY(-8px);
+  border-color: rgba(185, 28, 28, 0.4);
+}
+
+.speaker-card:hover::before {
+  transform: scaleX(1);
+}
+
+.speaker-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #b91c1c 0%, #7f1d1d 100%);
+  color: #fff;
+  font-size: 32px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 18px;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 24px rgba(185, 28, 28, 0.3), 0 0 15px rgba(185, 28, 28, 0.15);
+  border: 2px solid rgba(220, 38, 38, 0.2);
+}
+
+.speaker-card:hover .speaker-avatar {
+  transform: scale(1.15) rotate(5deg);
+  box-shadow: 0 12px 36px rgba(185, 28, 28, 0.4), 0 0 25px rgba(185, 28, 28, 0.25);
+}
+
+.speaker-card h3 {
+  font-size: 18px;
+  margin-bottom: 6px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.speaker-card .role {
+  font-size: 13px;
+  color: #a0a0a0;
+  margin-bottom: 14px;
+  font-weight: 600;
+}
+
+.speaker-card .topic {
+  font-size: 14px;
+  color: #d0d0d0;
+  background: linear-gradient(135deg, rgba(185, 28, 28, 0.08) 0%, rgba(127, 29, 29, 0.08) 100%);
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-style: italic;
+}
+
+/* ── Schedule ── */
+.schedule {
+  background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 50%, #0f0f0f 100%);
+  padding: 80px 40px;
+  position: relative;
+}
+
+.schedule::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 200px;
+  background: linear-gradient(180deg, rgba(238, 28, 37, 0.06) 0%, transparent 100%);
+  pointer-events: none;
+}
+
+.schedule-table {
+  width: 100%;
+  border-collapse: collapse;
+  max-width: 900px;
+  margin: 0 auto;
+  opacity: 0;
+  animation: fadeInUp 0.6s ease-out 0.3s forwards;
+}
+
+.schedule-table th {
+  text-align: left;
+  padding: 16px 18px;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #a0a0a0;
+  border-bottom: 2px solid rgba(220, 38, 38, 0.2);
+  font-weight: 700;
+}
+
+.schedule-table td {
+  padding: 18px;
+  border-bottom: 1px solid rgba(220, 38, 38, 0.1);
+  font-size: 15px;
+  transition: all 0.2s ease;
+  color: #c5c8cc;
+}
+
+.schedule-table tr:hover td {
+  background-color: rgba(220, 38, 38, 0.05);
+}
+
+.schedule-table tr:last-child td {
+  border-bottom: none;
+}
+
+.schedule-table .time {
+  color: #dc2626;
+  font-weight: 800;
+  width: 100px;
+  font-size: 16px;
+}
+
+.schedule-table .event-name {
+  font-weight: 700;
+  color: #f5f5f5;
+}
+
+.schedule-table .speaker-name {
+  color: #a0a0a0;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.tag-talk {
+  display: inline-block;
+  background: linear-gradient(135deg, rgba(220, 38, 38, 0.2) 0%, rgba(185, 28, 28, 0.2) 100%);
+  color: #ef4444;
+  font-size: 10px;
+  padding: 5px 12px;
+  border-radius: 6px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  border: 1px solid rgba(220, 38, 38, 0.4);
+}
+
+.tag-break {
+  display: inline-block;
+  background: rgba(100, 100, 100, 0.1);
+  color: #a0a0a0;
+  font-size: 10px;
+  padding: 5px 12px;
+  border-radius: 6px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  border: 1px solid rgba(100, 100, 100, 0.2);
+}
+
+/* ── Footer ── */
+footer {
+  background: linear-gradient(135deg, #050505 0%, #0f0f0f 100%);
+  color: #6b7280;
+  text-align: center;
+  padding: 56px 20px;
+  font-size: 14px;
+  border-top: 1px solid rgba(220, 38, 38, 0.2);
+}
+
+footer .ted-logo {
+  font-weight: 800;
+  font-size: 22px;
+  display: inline-flex;
+  gap: 6px;
+  align-items: center;
+}
+
+footer .ted-logo .tedx {
+  color: #EE1C25;
+}
+
+footer .ted-logo .ayzofl {
+  color: #ffffff;
+  font-weight: 900;
+}
+
+footer .ted-logo .youth {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+footer p {
+  margin-top: 12px;
+  color: #a0a0a0;
+  transition: color 0.3s ease;
+}
+
+footer p:hover {
+  color: #c5c8cc;
+}
+
+/* ━━━━━━━━━━━━━━━━━ MOBILE RESPONSIVE ━━━━━━━━━━━━━━━━━ */
+
+@media (max-width: 768px) {
+  nav {
+    padding: 0 12px;
+    height: auto;
+    min-height: 50px;
+  }
+
+  nav ul {
+    display: none !important;
+  }
+
+  .nav-logo {
+    font-size: 14px;
+  }
+
+  .nav-apply-btn {
+    padding: 8px 14px;
+    font-size: 11px;
+  }
+
+  .hero {
+    padding: 50px 16px;
+  }
+
+  .hero::before,
+  .hero::after {
+    display: none !important;
+  }
+
+  .hero h1 {
+    font-size: 24px;
+    line-height: 1.3;
+    margin-bottom: 12px;
+  }
+
+  .hero p {
+    font-size: 13px;
+    margin-bottom: 12px;
+    line-height: 1.5;
+  }
+
+  .hero .details {
+    font-size: 11px;
+    margin-bottom: 20px;
+  }
+
+  .btn-apply {
+    padding: 14px 28px;
+    font-size: 14px;
+    display: block;
+    width: 100%;
+    margin: 0 auto 12px !important;
+    max-width: 100%;
+  }
+
+  .btn {
+    padding: 14px 28px;
+    font-size: 14px;
+    display: block;
+    width: 100%;
+    margin: 12px auto 0 !important;
+    max-width: 100%;
+  }
+
+  section {
+    padding: 50px 16px;
+  }
+
+  .section-title {
+    font-size: 24px;
+    margin-bottom: 24px;
+  }
+
+  .about {
+    padding: 50px 16px;
+  }
+
+  .about p {
+    font-size: 12px;
+    line-height: 1.5;
+    padding: 0 8px;
+  }
+
+  section#speakers {
+    padding: 50px 16px;
+  }
+
+  .speakers-grid {
+    gap: 12px;
+    flex-direction: column;
+  }
+
+  .speaker-card {
+    width: 100%;
+    padding: 20px 16px;
+  }
+
+  .speaker-avatar {
+    width: 70px;
+    height: 70px;
+    font-size: 24px;
+  }
+
+  .speaker-card h3 {
+    font-size: 15px;
+  }
+
+  .speaker-card .role {
+    font-size: 11px;
+  }
+
+  .speaker-card .topic {
+    font-size: 12px;
+  }
+
+  .schedule {
+    padding: 50px 16px;
+  }
+
+  .schedule-table thead {
+    display: none;
+  }
+
+  .schedule-table tbody {
+    display: block;
+  }
+
+  .schedule-table tr {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 14px;
+    border: 1px solid rgba(220, 38, 38, 0.2);
+    border-radius: 6px;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.3);
+    gap: 8px;
+  }
+
+  .schedule-table td {
+    padding: 4px;
+    text-align: left;
+    border: none;
+    font-size: 12px;
+    min-width: 0;
+    flex: 0 1 auto;
+  }
+
+  .schedule-table .time {
+    font-size: 14px;
+    font-weight: 800;
+    color: #dc2626;
+    flex: 0 0 40px;
+    min-width: 40px;
+  }
+
+  .schedule-table .event-name {
+    flex: 1 1 100%;
+    font-size: 13px;
+  }
+
+  .schedule-table .speaker-name {
+    font-size: 11px;
+    flex: 1 1 100%;
+  }
+
+  footer {
+    padding: 35px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  nav {
+    padding: 0 8px;
+  }
+
+  .nav-logo {
+    font-size: 12px;
+  }
+
+  .nav-apply-btn {
+    padding: 6px 10px;
+    font-size: 10px;
+  }
+
+  .hero {
+    padding: 40px 12px;
+  }
+
+  .hero h1 {
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+
+  .hero p {
+    font-size: 12px;
+    margin-bottom: 8px;
+  }
+
+  .hero .details {
+    font-size: 10px;
+    margin-bottom: 16px;
+  }
+
+  .btn-apply {
+    padding: 12px 22px;
+    font-size: 12px;
+    display: block;
+    width: 100%;
+    margin: 0 auto 10px;
+  }
+
+  .btn {
+    padding: 12px 22px;
+    font-size: 12px;
+    display: block;
+    width: 100%;
+    margin: 10px auto 0;
+  }
+
+  section {
+    padding: 40px 12px;
+  }
+
+  .section-title {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+
+  .about {
+    padding: 40px 12px;
+  }
+
+  .about p {
+    font-size: 11px;
+    line-height: 1.4;
+    padding: 0 4px;
+  }
+
+  section#speakers {
+    padding: 40px 12px;
+  }
+
+  .speaker-card {
+    padding: 16px 12px;
+  }
+
+  .speaker-avatar {
+    width: 60px;
+    height: 60px;
+    font-size: 20px;
+  }
+
+  .speaker-card h3 {
+    font-size: 14px;
+  }
+
+  .schedule {
+    padding: 40px 12px;
+  }
+
+  .schedule-table tr {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 12px;
+    padding: 8px;
+    gap: 6px;
+  }
+
+  .schedule-table td {
+    padding: 2px;
+    font-size: 11px;
+    flex: 0 1 auto;
+    min-width: 0;
+  }
+
+  .schedule-table .time {
+    font-size: 12px;
+    flex: 0 0 35px;
+    min-width: 35px;
+  }
+
+  .schedule-table .event-name {
+    font-size: 11px;
+    flex: 1 1 100%;
+  }
+
+  .schedule-table .speaker-name {
+    font-size: 10px;
+    flex: 1 1 100%;
+  }
+
+  footer {
+    padding: 30px 12px;
+  }
+
+  footer .ted-logo {
+    font-size: 14px;
+  }
+}
