@@ -50,13 +50,13 @@ const speakers: Speaker[] = [
   },
   {
     id: 'GK',
-    name: 'Göktüğ',
+    name: 'Göktüğ Güler',
     role: 'AYZOFL 11. Sınıf Öğrencisi',
     topic: ''
   },
   {
     id: 'VK',
-    name: 'Veysel',
+    name: 'Veysel Dinç',
     role: 'AYZOFL 9. Sınıf Öğrencisi',
     topic: ''
   }

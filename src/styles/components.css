@@ -512,82 +512,123 @@ section#speakers::before {
   pointer-events: none;
 }
 
-.schedule-table {
-  width: 100%;
-  border-collapse: collapse;
-  max-width: 900px;
+.schedule-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  max-width: 1000px;
   margin: 0 auto;
   opacity: 0;
   animation: fadeInUp 0.6s ease-out 0.3s forwards;
 }
 
-.schedule-table th {
-  text-align: left;
-  padding: 16px 18px;
-  font-size: 11px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: #a0a0a0;
-  border-bottom: 2px solid rgba(220, 38, 38, 0.2);
-  font-weight: 700;
+.schedule-item {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding: 25px 30px;
+  border-left: 4px solid transparent;
+  background: rgba(255, 255, 255, 0.02);
+  transition: all 0.3s ease;
+  border-radius: 10px;
+  margin-bottom: 8px;
 }
 
-.schedule-table td {
-  padding: 18px;
-  border-bottom: 1px solid rgba(220, 38, 38, 0.1);
-  font-size: 15px;
-  transition: all 0.2s ease;
-  color: #c5c8cc;
+.schedule-item.talk {
+  border-left-color: #EE1C25;
+  background: linear-gradient(90deg, rgba(238, 28, 37, 0.1) 0%, rgba(238, 28, 37, 0.03) 100%);
 }
 
-.schedule-table tr:hover td {
-  background-color: rgba(220, 38, 38, 0.05);
+.schedule-item.talk:hover {
+  background: linear-gradient(90deg, rgba(238, 28, 37, 0.18) 0%, rgba(238, 28, 37, 0.08) 100%);
+  transform: translateX(12px);
+  box-shadow: 0 8px 25px rgba(238, 28, 37, 0.25);
+  border-left-color: #dc2626;
 }
 
-.schedule-table tr:last-child td {
-  border-bottom: none;
+.schedule-item.break {
+  border-left-color: #666;
+  background: rgba(100, 100, 100, 0.06);
 }
 
-.schedule-table .time {
-  color: #dc2626;
+.schedule-item.break:hover {
+  background: rgba(100, 100, 100, 0.12);
+  transform: translateX(8px);
+  box-shadow: 0 4px 15px rgba(100, 100, 100, 0.15);
+}
+
+.schedule-time {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 145px;
+  flex-shrink: 0;
+}
+
+.time-badge {
+  background: linear-gradient(135deg, #EE1C25 0%, #dc2626 100%);
+  color: white;
   font-weight: 800;
-  width: 100px;
+  font-size: 15px;
+  padding: 10px 16px;
+  border-radius: 8px;
+  text-align: center;
+  min-width: 60px;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 12px rgba(238, 28, 37, 0.3);
+}
+
+.schedule-item.break .time-badge {
+  background: linear-gradient(135deg, #888 0%, #777 100%);
+  box-shadow: 0 4px 12px rgba(100, 100, 100, 0.2);
+}
+
+.time-separator {
+  color: #999;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.schedule-content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  min-height: 40px;
+}
+
+.speaker-info {
   font-size: 16px;
-}
-
-.schedule-table .event-name {
   font-weight: 700;
-  color: #f5f5f5;
+  color: #ffffff;
+  letter-spacing: 0.3px;
 }
 
-.schedule-table .speaker-name {
-  color: #a0a0a0;
-  font-size: 14px;
-  font-weight: 500;
+.schedule-item.break .speaker-info {
+  color: #e0e0e0;
 }
 
-.tag-talk {
-  display: inline-block;
-  background: linear-gradient(135deg, rgba(220, 38, 38, 0.2) 0%, rgba(185, 28, 28, 0.2) 100%);
-  color: #ef4444;
-  font-size: 10px;
-  padding: 5px 12px;
+.schedule-type {
+  font-size: 13px;
+  font-weight: 700;
+  padding: 8px 16px;
   border-radius: 6px;
-  font-weight: 700;
   letter-spacing: 0.5px;
-  border: 1px solid rgba(220, 38, 38, 0.4);
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
-.tag-break {
-  display: inline-block;
-  background: rgba(100, 100, 100, 0.1);
-  color: #a0a0a0;
-  font-size: 10px;
-  padding: 5px 12px;
-  border-radius: 6px;
-  font-weight: 700;
-  letter-spacing: 0.5px;
-  border: 1px solid rgba(100, 100, 100, 0.2);
+.schedule-type.talk {
+  background: linear-gradient(135deg, rgba(238, 28, 37, 0.25) 0%, rgba(220, 38, 38, 0.2) 100%);
+  color: #ffa5a5;
+  border: 1px solid rgba(238, 28, 37, 0.6);
+}
+
+.schedule-type.break {
+  background: linear-gradient(135deg, rgba(120, 120, 120, 0.2) 0%, rgba(100, 100, 100, 0.15) 100%);
+  color: #d0d0d0;
+  border: 1px solid rgba(100, 100, 100, 0.4);
 }
 
 /* ── Footer ── */
@@ -754,50 +795,47 @@ footer p:hover {
     padding: 50px 16px;
   }
 
-  .schedule-table thead {
-    display: none;
+  .schedule-timeline {
+    gap: 4px;
   }
 
-  .schedule-table tbody {
-    display: block;
+  .schedule-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 18px;
   }
 
-  .schedule-table tr {
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 14px;
-    border: 1px solid rgba(220, 38, 38, 0.2);
-    border-radius: 6px;
-    padding: 10px;
-    background: rgba(0, 0, 0, 0.3);
-    gap: 8px;
+  .schedule-item:hover {
+    transform: translateX(6px) !important;
   }
 
-  .schedule-table td {
-    padding: 4px;
-    text-align: left;
-    border: none;
-    font-size: 12px;
-    min-width: 0;
-    flex: 0 1 auto;
+  .schedule-time {
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 8px;
   }
 
-  .schedule-table .time {
-    font-size: 14px;
-    font-weight: 800;
-    color: #dc2626;
-    flex: 0 0 40px;
-    min-width: 40px;
-  }
-
-  .schedule-table .event-name {
-    flex: 1 1 100%;
+  .time-badge {
     font-size: 13px;
+    padding: 8px 12px;
+    min-width: 48px;
   }
 
-  .schedule-table .speaker-name {
-    font-size: 11px;
-    flex: 1 1 100%;
+  .schedule-content {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .speaker-info {
+    font-size: 14px;
+    width: 100%;
+  }
+
+  .schedule-type {
+    font-size: 12px;
+    padding: 6px 12px;
   }
 
   footer {
@@ -895,19 +933,32 @@ footer p:hover {
     padding: 40px 12px;
   }
 
-  .schedule-table tr {
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 12px;
-    padding: 8px;
-    gap: 6px;
+  .schedule-timeline {
+    gap: 3px;
   }
 
-  .schedule-table td {
-    padding: 2px;
+  .schedule-item {
+    padding: 14px;
+    gap: 10px;
+  }
+
+  .schedule-time {
+    min-width: 130px;
+  }
+
+  .time-badge {
+    font-size: 12px;
+    padding: 6px 10px;
+    min-width: 42px;
+  }
+
+  .speaker-info {
+    font-size: 13px;
+  }
+
+  .schedule-type {
     font-size: 11px;
-    flex: 0 1 auto;
-    min-width: 0;
+    padding: 5px 10px;
   }
 
   .schedule-table .time {
