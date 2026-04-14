@@ -27,7 +27,7 @@ const speakers: Speaker[] = [
   {
     id: 'IY',
     name: 'İlker Yörü',
-    role: 'KOÇ Üniversitesi Öğrencisi',
+    role: 'Girişimci',
     topic: ''
   },
   {
@@ -39,7 +39,7 @@ const speakers: Speaker[] = [
   {
     id: 'MO',
     name: 'Mustafa Özçelik',
-    role: 'HAVELSAN Teknoloji Radar Genel Müdürü',
+    role: 'HAVELSAN Teknoloji Radar CEO',
     topic: ''
   },
   {
