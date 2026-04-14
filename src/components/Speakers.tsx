@@ -39,7 +39,7 @@ const speakers: Speaker[] = [
   {
     id: 'MO',
     name: 'Mustafa Özçelik',
-    role: 'HAVELSAN Teknoloji Radar CEO',
+    role: 'HAVELSAN Teknoloji Radar CEO\'su',
     topic: ''
   },
   {
