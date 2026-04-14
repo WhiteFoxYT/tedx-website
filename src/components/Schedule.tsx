@@ -6,20 +6,19 @@ interface ScheduleItem {
 }
 
 const scheduleItems: ScheduleItem[] = [
-  { time: '09:00', event: 'Kayıt Kabul & Açılış Seremonisi', speaker: '—', type: 'break' },
-  { time: '09:50', event: 'Yapay Zeka Geleceği', speaker: 'Prof. Alper Bilge', type: 'talk' },
-  { time: '10:20', event: 'Zihinsel Sağlık ve Başarı', speaker: 'Dr. Ayşe Günay Arıkan', type: 'talk' },
-  { time: '10:50', event: 'Kahve Molası', speaker: '—', type: 'break' },
-  { time: '11:20', event: 'Teknoloji ve Yönetim', speaker: 'Doç. Dr. Ramazan Şahin', type: 'talk' },
-  { time: '11:50', event: 'Gençlerin Bakış Açısı', speaker: 'İlker Yörü', type: 'talk' },
-  { time: '12:20', event: 'İş Dünyasında Liderlik', speaker: 'Özgür Günaydın', type: 'talk' },
-  { time: '12:40', event: 'Öğle Arasıürü', speaker: '—', type: 'break' },
-  { time: '14:10', event: 'Teknoloji ve İnovasyon', speaker: 'Mustafa Özçelik', type: 'talk' },
-  { time: '14:40', event: 'Hikayelerle Değişim', speaker: 'Özge Bahar Sunar', type: 'talk' },
-  { time: '15:10', event: 'Kahve Molası', speaker: '—', type: 'break' },
-  { time: '15:40', event: 'Genç Sesler', speaker: 'Göktüğ', type: 'talk' },
-  { time: '16:10', event: 'Genç Perspektifer', speaker: 'Veysel', type: 'talk' },
-  { time: '16:40', event: 'Kapanış Seremonisi', speaker: '—', type: 'break' }
+  { time: '09:00-09:50', event: 'Kayıt Kabul & Açılış Seremonisi', speaker: '—', type: 'break' },
+  { time: '09:50-10:10', event: 'Prof. Alper Bilge', speaker: 'Prof. Alper Bilge', type: 'talk' },
+  { time: '10:20-10:40', event: 'Dr. Ayşe Günay Arıkan', speaker: 'Dr. Ayşe Günay Arıkan', type: 'talk' },
+  { time: '10:50-11:20', event: 'Kahve Molası', speaker: '—', type: 'break' },
+  { time: '11:20-11:40', event: 'Doç. Dr. Ramazan Şahin', speaker: 'Doç. Dr. Ramazan Şahin', type: 'talk' },
+  { time: '11:50-12:10', event: 'İlker Yörü', speaker: 'İlker Yörü', type: 'talk' },
+  { time: '12:20-12:40', event: 'Şükrü Can', speaker: 'Şükrü Can', type: 'talk' },
+  { time: '12:40-14:10', event: 'Öğle Arası', speaker: '—', type: 'break' },
+  { time: '14:10-14:30', event: 'Mustafa Özçelik', speaker: 'Mustafa Özçelik', type: 'talk' },
+  { time: '14:40-15:00', event: 'Özge Bahar Sunar', speaker: 'Özge Bahar Sunar', type: 'talk' },
+  { time: '15:10-15:40', event: 'Kahve Molası', speaker: '—', type: 'break' },
+  { time: '15:40-16:00', event: 'Göktüğ & Veysel', speaker: 'Göktüğ & Veysel', type: 'talk' },
+  { time: '16:40-17:10', event: 'Kapanış Seremonisi', speaker: '—', type: 'break' }
 ];
 
 export default function Schedule() {

@@ -5,12 +5,9 @@ export default function About() {
         <div className="section-label">Etkinlik Hakkında</div>
         <div className="section-title"><span className="tedx">TEDx</span> <span className="ayzofl">AYZOFL</span> <span className="youth">YOUTH</span> Nedir?</div>
         <p>
-          <span className="tedx">TEDx</span><span className="ayzofl">AYZOFL</span> <span className="youth">YOUTH</span>, TED lisansı altında bağımsız olarak düzenlenen büyüleyici bir etkinliktir.
-          Hoşgeldiniz! Bu etkinlikte, gençlik topluluğumuzdan ilham veren insanları bir araya getiriyoruz.
+          <span className="tedx">TEDx</span><span className="ayzofl">AYZOFL</span> <span className="youth">YOUTH</span>, TED lisansı altında bağımsız olarak gerçekleştirilen, ilham verici ve etkileyici bir etkinliktir. Hoş geldiniz! Bu organizasyonda, Antalya Yusuf Ziya Öner Fen Lisesi öğrencileri olarak topluluğumuzdan ilham veren isimleri sizlerle bir araya getirerek farklı bakış açılarını buluşturuyoruz.
           <br /><br />
-          Bu yıl "Sınırları Aşmak" teması altında, fikirler, insanlar ve teknolojilerin nasıl sınırları aştığını
-          ve dünyayı nasıl değiştirdiğini keşfediyoruz. TED, kısa ve güçlü konuşmalar aracılığıyla fikirler
-          yayılmasına adanmış kar amacı gütmeyen bir kuruluştur.
+          Bu yıl "Farkındalık" temasıyla, bireylerin kendilerini, çevrelerini ve dünyayı daha bilinçli bir şekilde algılamalarının önemini keşfediyoruz. Tamamen lise öğrencileri tarafından düzenlenen bu etkinlikte, alanında değerli konuşmacılar kısa ve güçlü konuşmalarıyla katılımcılara ilham veriyor. TED ruhunu gençlerin enerjisiyle birleştiren bu platform, fikirlerin yayılmasına ve yeni perspektiflerin doğmasına katkı sağlıyor.
         </p>
       </section>
 

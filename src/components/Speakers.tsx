@@ -10,55 +10,55 @@ const speakers: Speaker[] = [
     id: 'AB',
     name: 'Prof. Alper Bilge',
     role: 'Yapay Zeka ve Veri Mühendisliği Profesörü',
-    topic: '"Yapay Zeka Geleceği"'
+    topic: ''
   },
   {
     id: 'AA',
     name: 'Dr. Ayşe Günay Arıkan',
     role: 'Psikiyatrist & Psikoterapist',
-    topic: '"Zihinsel Sağlık ve Başarı"'
+    topic: ''
   },
   {
     id: 'RS',
     name: 'Doç. Dr. Ramazan Şahin',
-    role: 'Antalya TUG Teknik Müdür Yardımcısı',
-    topic: '"Teknoloji ve Yönetim"'
+    role: 'Türkiye Ulusal Gözlemevi Teknik Müdür Yardımcısı',
+    topic: ''
   },
   {
     id: 'IY',
     name: 'İlker Yörü',
     role: 'KOÇ Üniversitesi Öğrencisi',
-    topic: '"Gençlerin Bakış Açısı"'
+    topic: ''
   },
   {
-    id: 'OG',
-    name: 'Özgür Günaydın',
-    role: 'Borusan Grubu CEO\'su',
-    topic: '"İş Dünyasında Liderlik"'
+    id: 'SC',
+    name: 'Şükrü Can',
+    role: 'Southwind Airlines CEO\'su',
+    topic: ''
   },
   {
     id: 'MO',
     name: 'Mustafa Özçelik',
     role: 'HAVELSAN Teknoloji Radar Genel Müdürü',
-    topic: '"Teknoloji ve İnovasyon"'
+    topic: ''
   },
   {
     id: 'OB',
     name: 'Özge Bahar Sunar',
     role: 'Çocuk Kitabı Yazarı',
-    topic: '"Hikayelerle Değişim"'
+    topic: ''
   },
   {
     id: 'GK',
     name: 'Göktüğ',
     role: 'AYZOFL 11. Sınıf Öğrencisi',
-    topic: '"Genç Sesler"'
+    topic: ''
   },
   {
     id: 'VK',
     name: 'Veysel',
     role: 'AYZOFL 9. Sınıf Öğrencisi',
-    topic: '"Genç Perspektifer"'
+    topic: ''
   }
 ];
 
@@ -68,7 +68,6 @@ function SpeakerCard({ speaker }: { speaker: Speaker }) {
       <div className="speaker-avatar">{speaker.id}</div>
       <h3>{speaker.name}</h3>
       <div className="role">{speaker.role}</div>
-      <div className="topic">{speaker.topic}</div>
     </div>
   );
 }
