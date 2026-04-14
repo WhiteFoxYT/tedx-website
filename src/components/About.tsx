@@ -29,6 +29,10 @@ export default function About() {
         <p>
           Katılımınız için teşekkür eder, ilham dolu ve keyifli bir etkinlik geçirmenizi dilerim.
           <br />
+          <br />
+          <strong>Ekin ÖZ</strong>
+        </p>
+        <p>
           <strong>Organizasyon Direktörü</strong>
         </p>
       </section>
