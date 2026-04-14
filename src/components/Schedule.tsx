@@ -13,13 +13,13 @@ const scheduleItems: ScheduleItem[] = [
   { time: '10:50-11:20', startTime: '10:50', endTime: '11:20', speaker: 'Kahve Molası', type: 'break' },
   { time: '11:20-11:40', startTime: '11:20', endTime: '11:40', speaker: 'Doç. Dr. Ramazan Şahin', type: 'talk' },
   { time: '11:50-12:10', startTime: '11:50', endTime: '12:10', speaker: 'İlker Yörü', type: 'talk' },
-  { time: '12:20-12:40', startTime: '12:20', endTime: '12:40', speaker: 'Şükrü Can', type: 'talk' },
-  { time: '12:40-14:10', startTime: '12:40', endTime: '14:10', speaker: 'Öğle Arasıürü', type: 'break' },
-  { time: '14:10-14:30', startTime: '14:10', endTime: '14:30', speaker: 'Mustafa Özçelik', type: 'talk' },
-  { time: '14:40-15:00', startTime: '14:40', endTime: '15:00', speaker: 'Özge Bahar Sunar', type: 'talk' },
-  { time: '15:10-15:40', startTime: '15:10', endTime: '15:40', speaker: 'Kahve Molası', type: 'break' },
-  { time: '15:40-16:00', startTime: '15:40', endTime: '16:00', speaker: 'Göktüğ Güler & Veysel Dinç', type: 'talk' },
-  { time: '16:40-17:10', startTime: '16:40', endTime: '17:10', speaker: 'Kapanış Seremonisi', type: 'break' }
+  { time: '12:10-13:40', startTime: '12:10', endTime: '13:40', speaker: 'Öğle Arasıürü', type: 'break' },
+  { time: '13:40-14:00', startTime: '13:40', endTime: '14:00', speaker: 'Şükrü Can', type: 'talk' },
+  { time: '14:00-14:20', startTime: '14:00', endTime: '14:20', speaker: 'Mustafa Özçelik', type: 'talk' },
+  { time: '14:20-14:50', startTime: '14:20', endTime: '14:50', speaker: 'Kahve Molası', type: 'break' },
+  { time: '14:50-15:10', startTime: '14:50', endTime: '15:10', speaker: 'Özge Bahar Sunar', type: 'talk' },
+  { time: '15:10-15:30', startTime: '15:10', endTime: '15:30', speaker: 'Göktüğ Güler & Veysel Dinç', type: 'talk' },
+  { time: '15:30-17:10', startTime: '15:30', endTime: '17:10', speaker: 'Kapanış Seremonisi', type: 'break' }
 ];
 
 export default function Schedule() {
